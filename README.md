@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/micflib/url-shortener-service/master/uss-syste
 
 #### How do I get set up? ####
 
-1. Clone this repo and execute `./mvnw spring-boot:run`. Or inside an IDE, run the class EmployeeManagementServiceApp
+1. Clone this repo and execute `./mvnw spring-boot:run`. Or inside an IDE, run the main class app.
 
    ```sh
     git clone https://github.com/micflib/url-shortener-service.git

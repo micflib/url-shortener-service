@@ -19,7 +19,8 @@ This service is responsible for providing REST API endpoints that will enable us
 2. Have a separate code generator service to manage hashes
 3. Deployment pipeline
 
-![Alt text](https://raw.githubusercontent.com/micflib/images/master/uss.png?token=GHSAT0AAAAAACBGZIKHWNMCA7ODLZZMLMG4ZBVJTPQ)
+https://raw.githubusercontent.com/micflib/url-shortener-service/master/uss-system-design.png
+
 
 #### How do I get set up? ####
 

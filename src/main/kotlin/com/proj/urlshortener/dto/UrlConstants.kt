@@ -9,3 +9,6 @@ const val HASH_PARAM = "hash"
 
 const val CREATE_URL_MAPPING = "/url/create"
 const val GET_URL_MAPPING = "/url"
+
+const val HEX_VALUE_INT = 0xFF
+const val HEX_VALUE_LIMIT = 7

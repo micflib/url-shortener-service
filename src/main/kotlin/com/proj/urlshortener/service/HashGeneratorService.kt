@@ -1,5 +1,7 @@
 package com.proj.urlshortener.service
 
+import com.proj.urlshortener.dto.HEX_VALUE_INT
+import com.proj.urlshortener.dto.HEX_VALUE_LIMIT
 import com.proj.urlshortener.exception.HashGeneratorException
 import org.springframework.stereotype.Component
 import java.security.MessageDigest
@@ -8,6 +10,7 @@ import java.security.NoSuchAlgorithmException
 @Component
 class HashGeneratorService {
 
+    @Suppress("SwallowedException")
     fun get(longURL: String): String {
         return try {
             // Create MD5 Hash
@@ -17,8 +20,8 @@ class HashGeneratorService {
             // Create Hex String
             val hexString = StringBuilder()
             for (b in messageDigest) {
-                hexString.append(Integer.toHexString(0xFF and b.toInt()))
-	            if (hexString.length > 7) break
+                hexString.append(Integer.toHexString(HEX_VALUE_INT and b.toInt()))
+                if (hexString.length > HEX_VALUE_LIMIT) break
             }
             hexString.toString()
         } catch (e: NoSuchAlgorithmException) {

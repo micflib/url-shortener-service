@@ -10,15 +10,15 @@ import org.junit.jupiter.api.extension.ExtendWith
 
 @ExtendWith(MockKExtension::class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class HashGeneratorServiceTest{
+class HashGeneratorServiceTest {
 
-	@InjectMockKs
-	lateinit var hashGeneratorService: HashGeneratorService
+    @InjectMockKs
+    lateinit var hashGeneratorService: HashGeneratorService
 
-	@Test
-	fun `should generate hash when url valid`() {
-		val hash = hashGeneratorService.get("url")
-		assertNotNull(hash)
-		assertEquals(hash.length, 8)
-	}
+    @Test
+    fun `should generate hash when url valid`() {
+        val hash = hashGeneratorService.get("url")
+        assertNotNull(hash)
+        assertEquals(hash.length, 8)
+    }
 }

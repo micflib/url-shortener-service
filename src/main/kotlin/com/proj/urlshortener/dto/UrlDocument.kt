@@ -6,20 +6,20 @@ import org.springframework.data.mongodb.core.mapping.Document
 import org.springframework.data.mongodb.core.mapping.Field
 
 @Document(collection = URL_COLLECTION)
-class UrlDocument (
+class UrlDocument(
 
-	@Id
-	val hash: String,
+    @Id
+    val hash: String,
 
-	@Field(LONG_URL_FIELD)
-	@Indexed(unique = true)
-	val url: String
+    @Field(LONG_URL_FIELD)
+    @Indexed(unique = true)
+    val url: String
 
 ) {
-	data class Builder(
-		var hash: String,
-		var url: String
-	) {
-		fun build() = UrlDocument(hash, url);
-	}
+    data class Builder(
+        var hash: String,
+        var url: String
+    ) {
+        fun build() = UrlDocument(hash, url)
+    }
 }

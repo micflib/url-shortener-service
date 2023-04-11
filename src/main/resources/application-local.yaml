@@ -1,0 +1,9 @@
+#
+# SERVICE CONFIGURATION FOR LOCAL DEVELOPMENT
+#
+spring:
+    data:
+        mongodb:
+            uri: mongodb://root:password@localhost:27011/
+            database: url-shortener-service
+            auto-index-creation: true
